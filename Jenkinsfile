@@ -7,14 +7,5 @@ node {
     stage("Build"){
         sh "docker build -t emirozbir/jdind:latest ."   
     }
-    
-    stage("Docker push "){
-        
-        withCredentials([string(credentialsId: 'docker-pwd', variable: 'dockerHubLogin')]) {
-                    sh "docker login -u emirozbir -p ${dockerHubLogin}"
 
-        }
-        sh "docker push emirozbir/jdind:latest"
-        
-    }
 }
