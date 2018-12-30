@@ -20,6 +20,4 @@ node {
         sh "docker push emirozbir/jdind:latest"
         
     }
-    
-    
 }
