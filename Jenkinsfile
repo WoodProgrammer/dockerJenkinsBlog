@@ -8,6 +8,7 @@ node {
 	sh "echo HiBro!"
 	sh "echo HiBro!"
 	sh "echo HiBro!"
+	sh "echo NewBranch!"
 
 	    
     }
