@@ -1,7 +1,8 @@
 node {
     
     stage("Git Checkout"){
-        sh "printenv"
+	
+        sh "echo Hello $branch"
     }
     stage("Build"){
 	sh "echo HiBro!"
