@@ -1,6 +1,6 @@
 node {
     environment {
-        DISPLAY_BRANCH = sh ( script: "echo $branch|cut -d '/' -f 3", returnStdOut:true)
+        DISPLAY_BRANCH = sh ( script: "echo $branch|cut -d '/' -f 3", returnStdout:true).trim()
     }
     stage("Git Checkout"){
         
