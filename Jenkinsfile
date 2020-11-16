@@ -1,16 +1,16 @@
 node {
-    
+    DISPLAY_BRANCH = sh ( script: "echo $branch|cut -d '/' -f 3", returnStdout:true).trim()
     stage("Git Checkout"){
-	
-        sh "echo Hello $branch"
+        
+        
+        currentBuild.displayName = "#${BUILD_NUMBER} - ${DISPLAY_BRANCH}"
     }
     stage("Build"){
-	sh "echo HiBro!"
-	sh "echo HiBro!"
-	sh "echo HiBro!"
-	sh "echo NewBranch!"
+        sh "echo New Branch"   
+        sh "echo New Branch"   
+        sh "echo New Branch"   
+        sh "echo New Branch"   
 
-	    
     }
 
 }
