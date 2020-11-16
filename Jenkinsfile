@@ -1,7 +1,7 @@
 node {
     
     stage("Git Checkout"){
-        BRANCH = sh ( script: "echo $branch|cut -d '/' -f 3", returnStdOut:true).trim()
+        BRANCH = sh ( script: "echo $branch|cut -d '/' -f 3", returnStdOut:true)
         
         currentBuild.displayName = "#${BUILD_NUMBER} - ${BRANCH}"
     }
