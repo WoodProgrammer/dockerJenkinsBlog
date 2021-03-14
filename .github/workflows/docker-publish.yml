@@ -18,6 +18,7 @@ jobs:
   test:
     steps:
       - uses: actions/checkout@v2
+      - name: Run Tests
 	run: echo "hello"
   push:
     runs-on: ubuntu-latest
