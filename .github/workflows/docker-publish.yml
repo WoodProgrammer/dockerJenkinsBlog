@@ -15,6 +15,10 @@ env:
   IMAGE_NAME: image
 
 jobs:
+  test:
+    steps:
+      - uses: actions/checkout@v2
+	run: echo "hello"
   push:
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
